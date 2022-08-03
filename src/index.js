@@ -1,26 +1,25 @@
 import './style.css'
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
 
-let sideBarOpen = true;
-const sidebar = document.querySelector("sidebar")
-const container = document.querySelector("container")
+let sidebarOpen = true;
+const sidebar = document.getElementById("sidebar")
+const container = document.getElementById("container")
 const burger = document.getElementById("burger")
 
 const revealSidebar = function(){
-    sidebar.style.width = "250px"
-    container.style.marginLeft = "250px"
-    sideBarOpen = true
+    //container.setAttribute("gridTemplateColumns", "1fr 4fr");
+    document.getElementById("sidebar").style.flexGrow = 1
+    sidebarOpen = true
+    console.log(sidebarOpen)
 }
 const closeSidebar = function(){
-    sidebar.style.width = "0"
-    container.style.marginLeft = "0"
-    sideBarOpen = false
+    //container.setAttribute("gridTemplateColumns", "0fr 1fr");
+    sidebar.style.flexGrow = 0
+    sidebarOpen = false
+    console.log(69)
+    console.log(sidebarOpen)
 }
 
 burger.addEventListener("click", () => {
-    const action = (sidebar === false) ? revealSidebar : closeSidebar
+    const action = sidebarOpen == true ? closeSidebar : revealSidebar
     action()
 })
