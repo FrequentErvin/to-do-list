@@ -1,0 +1,94 @@
+html,body{
+    height: 100vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav{
+    padding: 10px 30px;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav svg{
+    color: white;
+    font-size: 16px;
+}
+.left-icons{
+    padding: 5px;
+    display: flex;
+    gap: 15px;
+}
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.sidebar{
+    
+    color: grey;
+    background-color: #f7f7f7;
+    padding: 20px 30px;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: calc(100vh - 52px);
+}
+.sidebar button{
+    padding: 10px;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.title, .madeby{
+    
+    display: flex;
+    justify-content: center;
+}
+.madeby{
+    color: #555a6c;
+}
+.title{
+    font-size: 50px;
+    font-weight: 700;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.prompt{
+    font-size: 30px;
+    font-weight: 700;
+    color: #555a6c;
+}
+.signups{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: #555a6c;
+}
+
+.signup-svg{
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
